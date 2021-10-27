@@ -18,8 +18,9 @@ def main():
 
     number_input = input("Please choose a level! Press 1 for easy, 2 for hard: ")
     choose_word(number_input)
-    
-            
+
+def list_making(): 
+
     word_list = open("c_and_c.txt", "r").readlines()
     countries = []
     capitals = []
@@ -27,6 +28,7 @@ def main():
         c_and_c = I.split(" | ")
         countries.append(c_and_c[0])
         capitals.append(c_and_c[1].strip())
+    return countries
 
 if __name__ == '__main__':
         main()
