@@ -12,21 +12,20 @@ def list_making():
         capitals.append(c_and_c[1].strip())
     return countries
 
-#if __name__ == '__main__':
-        #main()
 
 
 
 
-#def play(word, lives):
+#def play(word):
+
     #good_guess = True
     #bad_guess = False
+    #if good_guess in word
     #lives = 6
-    #word_competition = "_" * len(countries)
     #while bad_guess in word:
         #print("Bad guess! ")
         #lives -= 1
-    #if good_guess in word:
+   # if good_guess in word:
         #print("Good guess! ")
 
 #def lines(word):
@@ -35,55 +34,43 @@ def list_making():
 
 
 
+
+
 def choose_word(number_input):
 
     short_list = []
     long_list = []
-    countries = list_making() 
-    #chosen_s_word 
-    #chosen_l_word 
+    countries = list_making()
 
 
     if number_input == "1":
         for word in countries:
             if len(word) <= 6:
                 short_list.append(word)
-        chosen_s_word = random.choice(short_list)
-        for letter in chosen_s_word:
-            chosen_s_word = chosen_s_word.replace(letter, '_')
-        #print(chosen_s_word)
-        return chosen_s_word
+        word = random.choice(short_list)
+        for letter in word:
+            word = word.replace(letter, '_')
+        return word
     
        
     if number_input == "2":
         for word in countries:
             if len(word) > 6:
                 long_list.append(word)
-        chosen_l_word = random.choice(long_list)
-        for letter in chosen_l_word:
-            chosen_l_word = chosen_l_word.replace(letter, '_')
-        #print(chosen_l_word)
-        return chosen_l_word
-        
-
-        
-#def hide(chosen_word, guess):
-    #if guess in chosen_word:
-        #index = chosen_word.index(guess)
-        #if letter[index] = guess:
-            #print(letter.replace('_', guess)
+        word = random.choice(long_list)
+        for letter in word:
+            word = word.replace(letter, '_')
+        return word
 
 
-#def play(word, lives):
-    #good_guess = True
-    #bad_guess = False
-    #lives = 6
-    #word_competition = "_" * len(word)
-    #while bad_guess in word:
-        #print("Bad guess! ")
-        #lives -= 1
-    #if good_guess in word:
-        #print("Good guess! ")
+def play(word, letter):
+    if input == "1":
+        return word
+
+
+
+
+
 
 def main():
     print(
@@ -102,12 +89,18 @@ def main():
 """)
 
     number_input = input("Please choose a level! Press 1 for easy, 2 for hard: ")
-    war = choose_word(number_input)
-    print(war)
+    x = choose_word(number_input)
+    print(x)
+    word = input("Have a guess: ")
+    play(word)
+    print(y)
 
 
 if __name__ == '__main__':
     main()
+
+#def play(letter_input):
+
 
 
 
@@ -118,4 +111,10 @@ if __name__ == '__main__':
  #   txt = word_lista
   #  x = txt.replace(world_lista,)
 
-  
+#def hide(chosen_word, guess):
+    #if guess in chosen_word:
+        #index = chosen_word.index(guess)
+        #if letter[index] = guess:
+            #print(letter.replace('_', guess)
+
+#def play(letter_input):
